@@ -1,4 +1,4 @@
-<Workspace Version="0.9.0.3067" X="-305.474634901836" Y="455.854291007792" zoom="0.503040378888985" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
+<Workspace Version="0.9.0.3067" X="-911.752762091081" Y="223.862259102726" zoom="0.762962640502193" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
   <NamespaceResolutionMap />
   <Elements>
     <DSRevitNodesUI.ElementsOfType guid="f684e169-579d-43a5-a559-8b5206141bce" type="DSRevitNodesUI.ElementsOfType" nickname="All Elements of Type" x="622.650471599005" y="225.420846433306" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" />
@@ -62,18 +62,19 @@ for group in groups:
 		element = doc.GetElement(member)
 		#memberlist.append(element.GetType())
 		if element.GetType().ToString() == "Autodesk.Revit.DB.ModelLine":
-			memberlist.append(doc.GetElement(member))
+			if element.LineStyle.Name == "b.UnitOutline":
+				memberlist.append(doc.GetElement(member))
 	grouplist.append(memberlist)
 	
 OUT = grouplist</Script>
     </PythonNodeModels.PythonNode>
-    <DSRevitNodesUI.ElementTypes guid="c290e8d5-8c81-4cef-acc1-ef2addd459da" type="DSRevitNodesUI.ElementTypes" nickname="Element Types" x="1693.21126401265" y="226.489153819914" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" index="185:ModelCurve" />
     <DSCore.Map guid="4646e7af-a944-4d35-a31b-1604b2fe3661" type="DSCore.Map" nickname="List.Map" x="2074.63069113951" y="349.696113219337" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" />
     <Dynamo.Nodes.DSFunction guid="1f3bb8b1-87e2-4ce0-b56f-3abc3c3bf27a" type="Dynamo.Nodes.DSFunction" nickname="CurveElement.Curve" x="1821.91462911312" y="479.864187528838" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="RevitNodes.dll" function="Revit.Elements.CurveElement.Curve" />
     <Dynamo.Nodes.DSFunction guid="89c3a674-92b6-41ee-8d9e-885e60c8d2a8" type="Dynamo.Nodes.DSFunction" nickname="PolyCurve.ByJoinedCurves" x="2260.20115465964" y="348.72193436324" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.PolyCurve.ByJoinedCurves@Autodesk.DesignScript.Geometry.Curve[]" />
     <Dynamo.Nodes.DSFunction guid="9029e19b-082c-450e-af05-ca20176931cd" type="Dynamo.Nodes.DSFunction" nickname="Surface.ByPatch" x="2473.88516105791" y="348.300096135891" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Surface.ByPatch@Autodesk.DesignScript.Geometry.Curve" />
     <Dynamo.Nodes.DSFunction guid="089d16e6-f78c-43e8-a0a6-2a10481bfef8" type="Dynamo.Nodes.DSFunction" nickname="Surface.Area" x="2693.99948706944" y="347.218090012726" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Surface.Area" />
     <DSCoreNodesUI.CreateList guid="c52497a3-3ee8-4234-991f-436d5e354cc0" type="DSCoreNodesUI.CreateList" nickname="List.Create" x="3104.324298366" y="-230.003399785069" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" inputcount="3" />
+    <Dynamo.Nodes.Watch guid="bf826b00-bd6d-4823-ab0a-8198fd60e929" type="Dynamo.Nodes.Watch" nickname="Watch" x="3332.18522179867" y="-230.506466785146" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" />
   </Elements>
   <Connectors>
     <Dynamo.Models.ConnectorModel start="f684e169-579d-43a5-a559-8b5206141bce" start_index="0" end="43ff623c-0ef2-469c-8e68-311ee5a3e106" end_index="0" portType="0" />
@@ -99,6 +100,7 @@ OUT = grouplist</Script>
     <Dynamo.Models.ConnectorModel start="89c3a674-92b6-41ee-8d9e-885e60c8d2a8" start_index="0" end="9029e19b-082c-450e-af05-ca20176931cd" end_index="0" portType="0" />
     <Dynamo.Models.ConnectorModel start="9029e19b-082c-450e-af05-ca20176931cd" start_index="0" end="089d16e6-f78c-43e8-a0a6-2a10481bfef8" end_index="0" portType="0" />
     <Dynamo.Models.ConnectorModel start="089d16e6-f78c-43e8-a0a6-2a10481bfef8" start_index="0" end="c52497a3-3ee8-4234-991f-436d5e354cc0" end_index="2" portType="0" />
+    <Dynamo.Models.ConnectorModel start="c52497a3-3ee8-4234-991f-436d5e354cc0" start_index="0" end="bf826b00-bd6d-4823-ab0a-8198fd60e929" end_index="0" portType="0" />
   </Connectors>
   <Notes />
   <Annotations />
