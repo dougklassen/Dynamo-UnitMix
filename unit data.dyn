@@ -1,4 +1,4 @@
-<Workspace Version="0.9.0.3067" X="-197.227499444243" Y="190.430714325886" zoom="0.233965914642925" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
+<Workspace Version="0.9.0.3067" X="-193.77259346182" Y="220.910365332869" zoom="0.296084089146316" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
   <NamespaceResolutionMap />
   <Elements>
     <DSRevitNodesUI.ElementsOfFamilyType guid="d8c5397a-9afd-4fb4-a1ed-cd7e3d1014aa" type="DSRevitNodesUI.ElementsOfFamilyType" nickname="All Elements of Family Type" x="2037.64987270479" y="842.183330931187" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" />
@@ -50,14 +50,6 @@
       <System.String>Name</System.String>
       <System.String value="Name" />
     </Dynamo.Nodes.StringInput>
-    <DSRevitNodesUI.Categories guid="4a2fa526-13e7-43d7-8e68-657ec40ed6a4" type="DSRevitNodesUI.Categories" nickname="Categories" x="2263.01144532191" y="1780.71974246064" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" index="486:Levels" />
-    <Dynamo.Nodes.DSFunction guid="20c79424-7833-4f6c-abd1-5fb0d7d1ad4e" type="Dynamo.Nodes.DSFunction" nickname="Element.GetParameterValueByName" x="2745.31001135225" y="1781.43727242884" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="RevitNodes.dll" function="Revit.Elements.Element.GetParameterValueByName@string" />
-    <DSRevitNodesUI.ElementsOfCategory guid="ec9a9dc6-8d1b-4811-9a32-1b087c80d211" type="DSRevitNodesUI.ElementsOfCategory" nickname="All Elements of Category" x="2485.91107398365" y="1780.71974246064" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" />
-    <Dynamo.Nodes.StringInput guid="c1a20dea-c045-484b-b128-d421c74ecac8" type="Dynamo.Nodes.StringInput" nickname="String" x="2589.68160377937" y="1856.60061152889" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True">
-      <System.String>Name</System.String>
-      <System.String value="Name" />
-    </Dynamo.Nodes.StringInput>
-    <Dynamo.Nodes.DSFunction guid="ebae55f5-e24c-4c7b-9b6d-4075907952e3" type="Dynamo.Nodes.DSFunction" nickname="List.FirstItem" x="3077.63748916543" y="1708.98264816955" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.List.FirstItem@var[]..[]" />
     <Dynamo.Nodes.DSFunction guid="1b11c762-6283-4f47-b921-92bc260cdfa9" type="Dynamo.Nodes.DSFunction" nickname="List.UniqueItems" x="3074.92725230745" y="933.299348806477" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.List.UniqueItems@var[]..[]" />
     <Dynamo.Nodes.DSFunction guid="bd07df83-eec3-4d4a-9e31-d5d6cb315eae" type="Dynamo.Nodes.DSFunction" nickname="List.AllIndicesOf" x="3404.81461607618" y="998.509893138431" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.List.AllIndicesOf@var[]..[],var" />
     <Dynamo.Nodes.DSFunction guid="f0f7709d-9bd9-4112-8555-84f5700a2a31" type="Dynamo.Nodes.DSFunction" nickname="List.Sort" x="3236.03218205949" y="930.932112903641" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.List.Sort@var[]" />
@@ -96,9 +88,6 @@
     <Dynamo.Models.ConnectorModel start="000564ff-f1b2-4f0b-b4b4-d8beea8df332" start_index="0" end="6bc3fa84-498e-468d-bff2-51ac7218c437" end_index="0" portType="0" />
     <Dynamo.Models.ConnectorModel start="000564ff-f1b2-4f0b-b4b4-d8beea8df332" start_index="0" end="893f1552-9be5-462c-8277-c669f8a906f5" end_index="0" portType="0" />
     <Dynamo.Models.ConnectorModel start="942fc24e-06c2-490a-bf93-732c682b7556" start_index="0" end="000564ff-f1b2-4f0b-b4b4-d8beea8df332" end_index="1" portType="0" />
-    <Dynamo.Models.ConnectorModel start="4a2fa526-13e7-43d7-8e68-657ec40ed6a4" start_index="0" end="ec9a9dc6-8d1b-4811-9a32-1b087c80d211" end_index="0" portType="0" />
-    <Dynamo.Models.ConnectorModel start="ec9a9dc6-8d1b-4811-9a32-1b087c80d211" start_index="0" end="20c79424-7833-4f6c-abd1-5fb0d7d1ad4e" end_index="0" portType="0" />
-    <Dynamo.Models.ConnectorModel start="c1a20dea-c045-484b-b128-d421c74ecac8" start_index="0" end="20c79424-7833-4f6c-abd1-5fb0d7d1ad4e" end_index="1" portType="0" />
     <Dynamo.Models.ConnectorModel start="1b11c762-6283-4f47-b921-92bc260cdfa9" start_index="0" end="f0f7709d-9bd9-4112-8555-84f5700a2a31" end_index="0" portType="0" />
     <Dynamo.Models.ConnectorModel start="bd07df83-eec3-4d4a-9e31-d5d6cb315eae" start_index="0" end="893f1552-9be5-462c-8277-c669f8a906f5" end_index="1" portType="0" />
     <Dynamo.Models.ConnectorModel start="f0f7709d-9bd9-4112-8555-84f5700a2a31" start_index="0" end="bd07df83-eec3-4d4a-9e31-d5d6cb315eae" end_index="1" portType="0" />
@@ -109,14 +98,7 @@
     <Dynamo.Models.ConnectorModel start="9617f42c-f530-475c-a6ad-0af569828f78" start_index="0" end="8732915f-d245-40ac-ade5-34b2a9fd0da3" end_index="6" portType="0" />
   </Connectors>
   <Notes />
-  <Annotations>
-    <Dynamo.Models.AnnotationModel guid="f5b96b5f-30d3-4379-94f4-88f013ce84d3" annotationText="&lt;Click here to edit the group title&gt;" left="2253.01144532191" top="1750.71974246064" width="744.29856603034" height="173.88086906825" fontSize="14" InitialTop="1780.71974246064" InitialHeight="173.880869068249" TextblockHeight="20" backgrouund="#FFC1D676">
-      <Models ModelGuid="4a2fa526-13e7-43d7-8e68-657ec40ed6a4" />
-      <Models ModelGuid="20c79424-7833-4f6c-abd1-5fb0d7d1ad4e" />
-      <Models ModelGuid="ec9a9dc6-8d1b-4811-9a32-1b087c80d211" />
-      <Models ModelGuid="c1a20dea-c045-484b-b128-d421c74ecac8" />
-    </Dynamo.Models.AnnotationModel>
-  </Annotations>
+  <Annotations />
   <Presets />
   <Cameras>
     <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
